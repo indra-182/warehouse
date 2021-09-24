@@ -24,7 +24,7 @@ export class GoodsListComponent implements OnInit {
     this.router.navigate(['detail', id]);
   }
 
-  goToUpdate(id: String)
+  goToEdit(id: String)
   {
     this.router.navigate(['update', id]);
   }
