@@ -11,7 +11,7 @@ const routes: Routes = [
   	{path:'goods', component:GoodsListComponent},
   	{path:'add', component:GoodsCreateComponent},
   	{path:'update/:id', component:GoodsUpdateComponent},
-  	{path:'details/:id', component:GoodsDetailsComponent}
+  	{path:'detail/:id', component:GoodsDetailsComponent}
 ];
 
 @NgModule({

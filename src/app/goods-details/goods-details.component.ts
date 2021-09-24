@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { GoodsService } from '../goods.service';
+import { Goods } from '../goods';
 
 @Component({
   selector: 'app-goods-details',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoodsDetailsComponent implements OnInit {
 
-  constructor() { }
+  id: String;
+  goods: Goods;
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute, private router: Router, private goodsService : GoodsService) { }
+
+  backToListGoods() {
+    this.router.navigate(['goods']);
   }
 
-}
+  ngOnInit() {
+
+    this.goods = new Goods();
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.goodsService.findGoods(this.id).subscribe(
+    
+      data=>{
+        console.log(data);
+        this.goods = data;
+      }, error=>console.log(error)
+    );
+  }
+  }
+
