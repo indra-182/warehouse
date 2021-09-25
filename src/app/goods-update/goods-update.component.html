@@ -1,23 +1,23 @@
-<h3>Update Data Barang</h3>
+<h3>Update Goods Data</h3>
 <div style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label>Kode Barang</label>
+      <label>Goods Code</label>
       <input type="text" class="form-control" name="goodsCode" [(ngModel)]="goods.goodsCode" required>
     </div>
 
     <div class="form-group">
-      <label>Nama Barang</label>
+      <label>Goods Name</label>
       <input type="text" class="form-control" name="goodsName" [(ngModel)]="goods.goodsName" required>
     </div>
 
     <div class="form-group">
-      <label>Stok</label>
+      <label>Stock</label>
       <input type="text" class="form-control" name="goodsStock"  [(ngModel)]="goods.goodsStock" required>
     </div>
 
     <div class="form-group">
-        <label>Harga</label>
+        <label>Price</label>
         <input type="text" class="form-control" name="goodsPrice"  [(ngModel)]="goods.goodsPrice" required>
       </div>
 
