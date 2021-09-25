@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { StoreService } from '../Store.service';
+import { Store } from '../store';
 
 @Component({
   selector: 'app-store-details',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreDetailsComponent implements OnInit {
 
-  constructor() { }
+  id: String;
+  store: Store;
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute, private router: Router, private storeService : StoreService) { }
+
+  backToListStore() {
+    this.router.navigate(['store']);
   }
 
+  ngOnInit() {
+    this.store = new Store();
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.storeService.findStore(this.id).subscribe(
+    
+      data=>{
+        console.log(data);
+        this.store = data;
+      }, error=>console.log(error)
+    );
+  }
 }

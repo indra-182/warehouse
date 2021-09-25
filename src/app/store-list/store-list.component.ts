@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Store } from '../store';
+import { StoreService } from '../store.service';
 
 @Component({
   selector: 'app-store-list',
@@ -7,9 +11,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreListComponent implements OnInit {
 
-  constructor() { }
+  store : Observable<Store[]>;
+  constructor(private storeService : StoreService, private router : Router) { }
+
+  reloadData()
+  {
+    this.store = this.storeService.getListStore();
+  }
+
+  goToDetail(id: String)
+  {
+    this.router.navigate(['detail', id]);
+  }
+
+  goToEdit(id: String)
+  {
+    this.router.navigate(['update', id]);
+  }
+
+  deleteStore(id: String)
+  {
+    this.storeService.deleteStore(id).subscribe(
+      data=>{
+        console.log(data);
+        this.reloadData();
+      }, 
+      error=> console.log(error)
+    )
+  }
 
   ngOnInit() {
+    this.reloadData();
   }
+
 
 }
