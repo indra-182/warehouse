@@ -12,7 +12,7 @@ export class SupplierService {
   constructor(private http:HttpClient) { }
 
   getListSupplier():Observable<any> {
-    return this.http.get(`${this.baseUrl}/warehouse/get`);
+    return this.http.get(`${this.baseUrl}/supplier/get`);
   }
 
   createListSupplier(supplier : Supplier ):Observable<any> {
