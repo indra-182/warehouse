@@ -11,6 +11,16 @@ public class WarehouseGoodsDetail {
 
     @Id
     private String id;
+    private String goodsId;
+
+    public String getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
+    }
+
     private String warehouseId;
     private int goodsStock;
 

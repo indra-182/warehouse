@@ -12,10 +12,20 @@ public class TransactionGoods {
 
     @Id
     private String id;
+    private String goodsId;
     private String idFrom;
     private String idTo;
     private int goodsQuantity;
     private Date goodsDelivery;
+
+    public String getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
+    }
+
     private Date goodsArrived;
 
     public String getId() {
