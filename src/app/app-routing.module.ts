@@ -12,6 +12,10 @@ import { StoreListComponent } from './store-list/store-list.component';
 import { StoreCreateComponent } from './store-create/store-create.component';
 import { StoreUpdateComponent } from './store-update/store-update.component';
 import { StoreDetailsComponent } from './store-details/store-details.component';
+import { SupplierListComponent } from './supplier-list/supplier-list.component';
+import { SupplierCreateComponent } from './supplier-create/supplier-create.component';
+import { SupplierUpdateComponent } from './supplier-update/supplier-update.component';
+import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
 
 const routes: Routes = [
   	{path:'', redirectTo:'goods',pathMatch:'full'},
@@ -26,7 +30,11 @@ const routes: Routes = [
   	{path:'store', component:StoreListComponent},
   	{path:'addStore', component:StoreCreateComponent},
   	{path: 'updateStore/:id', component: StoreUpdateComponent},
-  	{path: 'detailStore/:id', component: StoreDetailsComponent}
+  	{path: 'detailStore/:id', component: StoreDetailsComponent},
+	{path:'supplier', component:SupplierListComponent},
+  	{path:'addSupplier', component:SupplierCreateComponent},
+  	{path: 'updateSupplier/:id', component: SupplierUpdateComponent},
+  	{path: 'detailSupplier/:id', component: SupplierDetailsComponent}
 ];
 
 @NgModule({

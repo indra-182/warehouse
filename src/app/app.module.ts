@@ -16,6 +16,10 @@ import { StoreCreateComponent } from './store-create/store-create.component';
 import { StoreDetailsComponent } from './store-details/store-details.component';
 import { StoreListComponent } from './store-list/store-list.component';
 import { StoreUpdateComponent } from './store-update/store-update.component';
+import { SupplierCreateComponent } from './supplier-create/supplier-create.component';
+import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
+import { SupplierListComponent } from './supplier-list/supplier-list.component';
+import { SupplierUpdateComponent } from './supplier-update/supplier-update.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { StoreUpdateComponent } from './store-update/store-update.component';
     StoreCreateComponent,
     StoreDetailsComponent,
     StoreListComponent,
-    StoreUpdateComponent
+    StoreUpdateComponent,
+    SupplierCreateComponent,
+    SupplierDetailsComponent,
+    SupplierListComponent,
+    SupplierUpdateComponent
   ],
   imports: [
     BrowserModule,
