@@ -8,13 +8,12 @@
           <tr>
             <th>Store Name</th>
             <th>Store Phone Number</th>
-            <th>  </th>
           </tr>   
         </thead>
         <tbody >
-          <tr *ngFor="let g of store | async">
+          <tr *ngFor="let s of store | async">
             <td>{{ s.storeName }}</td>
-            <td>{{ s.storePhoneNumber }}</td>
+            <td>{{ s.storePhone }}</td>
             <td>
               <button (click)="goToDetail(s.id)" class="btn btn-info" style="margin-right: 10px;">Detail</button>
               <button (click)="goToEdit(s.id)" class="btn btn-info"style="margin-right: 10px;">Edit</button>

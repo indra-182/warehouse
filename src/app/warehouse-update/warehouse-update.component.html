@@ -2,11 +2,6 @@
 <div style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label>Warehouse Id</label>
-      <input type="text" class="form-control" name="warehouseId" [(ngModel)]="warehouse.warehouseId" required>
-    </div>
-
-    <div class="form-group">
       <label>Warehouse Name</label>
       <input type="text" class="form-control" name="warehouseName" [(ngModel)]="warehouse.warehouseName" required>
     </div>
@@ -17,7 +12,7 @@
     </div>
 
     <div class="form-group">
-        <label>Warehouse Phone</label>
+        <label>Warehouse Phone Number</label>
         <input type="text" class="form-control" name="warehousePhone"  [(ngModel)]="warehouse.warehousePhone" required>
       </div>
 

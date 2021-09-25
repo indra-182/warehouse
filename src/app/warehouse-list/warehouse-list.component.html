@@ -6,7 +6,6 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Warehouse Id</th>
             <th>Warehouse Name</th>
             <th>Warehouse Address</th>
             <th>Warehouse Phone</th>
@@ -14,7 +13,6 @@
         </thead>
         <tbody >
           <tr *ngFor="let w of warehouse | async">
-            <td>{{ w.warehouseId }}</td>
             <td>{{ w.warehouseName }}</td>
             <td>{{ w.warehouseAddress }}</td>
             <td>{{ w.warehousePhone }}</td>

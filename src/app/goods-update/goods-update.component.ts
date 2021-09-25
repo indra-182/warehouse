@@ -33,7 +33,7 @@ export class GoodsUpdateComponent implements OnInit {
   }
 
   updateGoods() {
-    this.goodsService.findGoods(this.id).subscribe(
+    this.goodsService.updateListGoods(this.goods).subscribe(
       (data) => {
         console.log(data);
         this.backToTheListGoods();
@@ -46,6 +46,6 @@ export class GoodsUpdateComponent implements OnInit {
   }
 
   backToTheListGoods() {
-    this.router.navigate(["goods"]);
+    this.router.navigate(['goods']);
   }
 }

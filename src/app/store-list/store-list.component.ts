@@ -21,12 +21,12 @@ export class StoreListComponent implements OnInit {
 
   goToDetail(id: String)
   {
-    this.router.navigate(['detail', id]);
+    this.router.navigate(['detailStore', id]);
   }
 
   goToEdit(id: String)
   {
-    this.router.navigate(['update', id]);
+    this.router.navigate(['updateStore', id]);
   }
 
   deleteStore(id: String)

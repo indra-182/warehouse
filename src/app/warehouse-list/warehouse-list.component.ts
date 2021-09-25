@@ -21,12 +21,12 @@ export class WarehouseListComponent implements OnInit {
   
 	goToDetail(id: String)
 	{
-	  this.router.navigate(['detail', id]);
+	  this.router.navigate(['detailWarehouse', id]);
 	}
   
 	goToEdit(id: String)
 	{
-	  this.router.navigate(['update', id]);
+	  this.router.navigate(['updateWarehouse', id]);
 	}
   
 	deleteWarehouse(id: String)

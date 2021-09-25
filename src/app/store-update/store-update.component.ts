@@ -33,7 +33,7 @@ export class StoreUpdateComponent implements OnInit {
   }
 
   updateStore() {
-    this.storeService.findStore(this.id).subscribe(
+    this.storeService.updateListStore(this.store).subscribe(
       (data) => {
         console.log(data);
         this.backToTheListStore();

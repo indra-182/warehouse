@@ -34,7 +34,7 @@ export class WarehouseUpdateComponent implements OnInit {
   }
 
   updateWarehouse() {
-    this.warehouseService.findWarehouse(this.id).subscribe(
+    this.warehouseService.updateListWarehouse(this.warehouse).subscribe(
       (data) => {
         console.log(data);
         this.backToTheListWarehouse();
