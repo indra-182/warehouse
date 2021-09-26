@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Supplier } from '../supplier';
+import { SupplierService } from '../supplier.service';
 
 @Component({
   selector: 'app-supplier-details',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupplierDetailsComponent implements OnInit {
 
-  constructor() { }
+  id: String;
+  supplier: Supplier;
 
-  ngOnInit() {
+  constructor(private route: ActivatedRoute, private router: Router, private supplierService : SupplierService) { }
+
+  backToListSupplier() {
+    this.router.navigate(['supplier']);
   }
 
-}
+  ngOnInit() {
+
+    this.supplier = new Supplier();
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.supplierService.findSupplier(this.id).subscribe(
+    
+      data=>{
+        console.log(data);
+        this.supplier = data;
+      }, error=>console.log(error)
+    );
+  }
+  }
