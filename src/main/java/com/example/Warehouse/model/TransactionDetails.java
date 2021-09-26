@@ -6,21 +6,12 @@ import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
-@Table(name = "trx_warehouse_goods_detail")
-public class WarehouseGoodsDetail {
+@Table(name = "trx_details")
+public class TransactionDetails {
 
     @Id
     private String id;
     private String goodsId;
-
-    public String getGoodsId() {
-        return goodsId;
-    }
-
-    public void setGoodsId(String goodsId) {
-        this.goodsId = goodsId;
-    }
-
     private String warehouseId;
     private int goodsStock;
 
@@ -33,6 +24,14 @@ public class WarehouseGoodsDetail {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
     }
 
     public String getWarehouseId() {

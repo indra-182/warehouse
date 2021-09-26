@@ -7,26 +7,19 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name = "trx_transaction_goods")
-public class TransactionGoods {
+@Table(name = "trx_transaction")
+public class Transaction {
 
     @Id
     private String id;
     private String goodsId;
     private String idFrom;
     private String idTo;
+    private String type;
     private int goodsQuantity;
     private Date goodsDelivery;
-
-    public String getGoodsId() {
-        return goodsId;
-    }
-
-    public void setGoodsId(String goodsId) {
-        this.goodsId = goodsId;
-    }
-
     private Date goodsArrived;
+
 
     public String getId() {
         if (id == null || id.equals("")) {
@@ -37,6 +30,14 @@ public class TransactionGoods {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(String goodsId) {
+        this.goodsId = goodsId;
     }
 
     public String getIdFrom() {
@@ -53,6 +54,14 @@ public class TransactionGoods {
 
     public void setIdTo(String idTo) {
         this.idTo = idTo;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getGoodsQuantity() {
@@ -79,4 +88,3 @@ public class TransactionGoods {
         this.goodsArrived = goodsArrived;
     }
 }
-
