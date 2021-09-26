@@ -1,7 +1,6 @@
 package com.example.Warehouse.controller;
-import com.example.Warehouse.model.Goods;
+
 import com.example.Warehouse.model.Warehouse;
-import com.example.Warehouse.service.GoodsService;
 import com.example.Warehouse.service.WarehouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

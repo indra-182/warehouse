@@ -1,8 +1,6 @@
 package com.example.Warehouse.controller;
 
-import com.example.Warehouse.model.Store;
 import com.example.Warehouse.model.Supplier;
-import com.example.Warehouse.service.StoreService;
 import com.example.Warehouse.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@RestController
+@RequestMapping("/supplier")
 public class SupplierController {
 
     @Autowired

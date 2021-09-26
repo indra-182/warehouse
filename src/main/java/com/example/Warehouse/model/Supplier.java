@@ -4,6 +4,7 @@ package com.example.Warehouse.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
 @Entity
 @Table (name="mst_supplier")
@@ -15,6 +16,9 @@ public class Supplier {
     private String supplierPhone;
 
     public String getId() {
+        if (id == null || id.equals("")) {
+            id = UUID.randomUUID().toString();
+        }
         return id;
     }
 
