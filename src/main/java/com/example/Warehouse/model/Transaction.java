@@ -18,13 +18,13 @@ public class Transaction {
     private String type;
     private int goodsQuantity;
     private Date goodsDelivery;
-    private Date goodsArrived;
 
+
+    public Transaction() {
+        id = UUID.randomUUID().toString();
+    }
 
     public String getId() {
-        if (id == null || id.equals("")) {
-            id = UUID.randomUUID().toString();
-        }
         return id;
     }
 
@@ -80,11 +80,4 @@ public class Transaction {
         this.goodsDelivery = goodsDelivery;
     }
 
-    public Date getGoodsArrived() {
-        return goodsArrived;
-    }
-
-    public void setGoodsArrived(Date goodsArrived) {
-        this.goodsArrived = goodsArrived;
-    }
 }

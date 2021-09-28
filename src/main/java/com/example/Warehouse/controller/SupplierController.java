@@ -2,6 +2,7 @@ package com.example.Warehouse.controller;
 
 import com.example.Warehouse.model.Supplier;
 import com.example.Warehouse.service.SupplierService;
+import com.example.Warehouse.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,21 @@ public class SupplierController {
 
     @Autowired
     private SupplierService supplierService;
+
+    @Autowired
+    private TransactionService transactionService;
+
+    @PostMapping("/suppliertowarehouse")
+    public ResponseEntity<?> supplierToWarehouse(
+            @RequestParam String goodsId,
+            @RequestParam String idFrom,
+            @RequestParam String idTo,
+            @RequestParam int goodsQuantity
+    ) {
+        String response = transactionService.supplierToWarehouseTransaction(goodsId, idFrom, idTo, goodsQuantity);
+        return ResponseEntity.ok().body(response);
+    }
+
 
     @GetMapping("/get")
     public ResponseEntity<List<Supplier>> showAllSupplier() {

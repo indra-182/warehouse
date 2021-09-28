@@ -7,23 +7,20 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "trx_details")
-public class TransactionDetails {
+public class Details {
 
     @Id
     private String id;
-    private String goodsId;
     private String warehouseId;
+    private String goodsId;
     private int goodsStock;
+
 
     public String getId() {
         if (id == null || id.equals("")) {
             id = UUID.randomUUID().toString();
         }
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getGoodsId() {

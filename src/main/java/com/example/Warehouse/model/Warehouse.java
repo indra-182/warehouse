@@ -13,7 +13,7 @@ public class Warehouse {
     private String id;
     private String warehouseName;
     private String warehouseAddress;
-    private String warehousePhone;
+    private Long warehousePhone;
 
     public String getId() {
         if (id == null || id.equals("")) {
@@ -43,11 +43,11 @@ public class Warehouse {
         this.warehouseAddress = warehouseAddress;
     }
 
-    public String getWarehousePhone() {
+    public Long getWarehousePhone() {
         return warehousePhone;
     }
 
-    public void setWarehousePhone(String warehousePhone) {
+    public void setWarehousePhone(Long warehousePhone) {
         this.warehousePhone = warehousePhone;
     }
 }
