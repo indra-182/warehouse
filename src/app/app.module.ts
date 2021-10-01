@@ -20,6 +20,9 @@ import { SupplierCreateComponent } from './supplier-create/supplier-create.compo
 import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
 import { SupplierListComponent } from './supplier-list/supplier-list.component';
 import { SupplierUpdateComponent } from './supplier-update/supplier-update.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { ReportDetailsComponent } from './report-details/report-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { SupplierUpdateComponent } from './supplier-update/supplier-update.compo
     SupplierCreateComponent,
     SupplierDetailsComponent,
     SupplierListComponent,
-    SupplierUpdateComponent
+    SupplierUpdateComponent,
+    HomeComponent,
+    LoginComponent,
+    ReportDetailsComponent
   ],
   imports: [
     BrowserModule,
