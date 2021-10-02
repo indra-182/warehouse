@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Warehouse Management System';
+  constructor(public authenticationService: AuthenticationService){
+
+  }
+  
+  logout(){
+    this.authenticationService.logout();
+  }
 }
