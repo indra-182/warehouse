@@ -62,6 +62,7 @@ export class CreateSup2wareComponent implements OnInit {
   save() {
     this.transactionService.supplierToWarehouse(this.trans).subscribe(
       data => {
+        this.trans=data;
         alert("Success")
       },
       error => console.log(error)

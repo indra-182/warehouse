@@ -14,7 +14,7 @@ export class TransactionService {
 
 
   supplierToWarehouse(trans:Transaction):Observable<any> {
-    return this.http.post(`${this.baseUrl}/trans/supplier2warehouse`,trans);
+    return this.http.post(`${this.baseUrl}/trans/supplier2warehouse`,trans, {responseType: 'text'});
   }
 
   warehouseToWarehouse(trans:Transaction):Observable<any> {
@@ -22,7 +22,7 @@ export class TransactionService {
   }
 
   warehouseToStore(trans:Transaction):Observable<any> {
-    return this.http.post(`${this.baseUrl}/trans/warehouse2store`,trans);
+    return this.http.post(`${this.baseUrl}/trans/warehouse2store`,trans, {responseType: 'text'});
   }
 
 }
