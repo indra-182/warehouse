@@ -18,7 +18,10 @@ public class GoodsService {
     }
 
     public List<Goods> createGoods(Goods goods) {
+        goods.setGoodsStock(0);
         goodsRepository.save(goods);
+
+
         return showAll();
     }
 

@@ -17,6 +17,7 @@ public class SupplierController {
     @Autowired
     private SupplierService supplierService;
 
+
     @GetMapping("/get")
     public ResponseEntity<List<Supplier>> showAllSupplier() {
         List<Supplier> lSupplier = supplierService.showAll();

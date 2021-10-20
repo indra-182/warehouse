@@ -1,8 +1,11 @@
 package com.example.Warehouse.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
@@ -17,14 +20,15 @@ public class Transaction {
     private String idTo;
     private String type;
     private int goodsQuantity;
-    private Date goodsDelivery;
-    private Date goodsArrived;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private LocalDate goodsDelivery;
 
+
+    public Transaction() {
+        id = UUID.randomUUID().toString();
+    }
 
     public String getId() {
-        if (id == null || id.equals("")) {
-            id = UUID.randomUUID().toString();
-        }
         return id;
     }
 
@@ -72,19 +76,12 @@ public class Transaction {
         this.goodsQuantity = goodsQuantity;
     }
 
-    public Date getGoodsDelivery() {
+    public LocalDate getGoodsDelivery() {
         return goodsDelivery;
     }
 
-    public void setGoodsDelivery(Date goodsDelivery) {
+    public void setGoodsDelivery(LocalDate goodsDelivery) {
         this.goodsDelivery = goodsDelivery;
     }
 
-    public Date getGoodsArrived() {
-        return goodsArrived;
-    }
-
-    public void setGoodsArrived(Date goodsArrived) {
-        this.goodsArrived = goodsArrived;
-    }
 }
