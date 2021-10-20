@@ -12,7 +12,7 @@ public class Store {
     @Id
     private String id;
     private String storeName;
-    private String storePhone;
+    private Long storePhone;
 
     public String getId() {
         if (id == null || id.equals("")) {
@@ -33,11 +33,11 @@ public class Store {
         this.storeName = storeName;
     }
 
-    public String getStorePhone() {
+    public Long getStorePhone() {
         return storePhone;
     }
 
-    public void setStorePhone(String storePhone) {
+    public void setStorePhone(Long storePhone) {
         this.storePhone = storePhone;
     }
 }

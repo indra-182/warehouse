@@ -13,7 +13,7 @@ public class Supplier {
     @Id
     private String id;
     private String supplierName;
-    private String supplierPhone;
+    private Long supplierPhone;
 
     public String getId() {
         if (id == null || id.equals("")) {
@@ -34,11 +34,11 @@ public class Supplier {
         this.supplierName = supplierName;
     }
 
-    public String getSupplierPhone() {
+    public Long getSupplierPhone() {
         return supplierPhone;
     }
 
-    public void setSupplierPhone(String supplierPhone) {
+    public void setSupplierPhone(Long supplierPhone) {
         this.supplierPhone = supplierPhone;
     }
 }
